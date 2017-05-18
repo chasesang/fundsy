@@ -13,6 +13,11 @@
   </div>
 <% end %>
 
+<%= simple_form_for [@campaign, @pledge] do |f| %>
+<%= f.input :amount %>
+<%= f.submit 'Pledge!', class:'btn btn-primary' %>
+<% end %>
+
 <% @campaign.rewards.each do |reward| %>
   <div class="well col-md-4">
     <h3><%= reward.title %></h3>
